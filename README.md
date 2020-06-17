@@ -5,7 +5,7 @@ Takes .wav files and outputs the number of silences, words per minute and word f
   The audio file is .wav format
   There is a stable internet connection
 
-## Lanuguage and library requirements:
+## Language and library requirements:
   python 3.7
   SpeechRecognition
   pydub
