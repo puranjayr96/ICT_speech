@@ -21,8 +21,7 @@ Takes .wav files and outputs the number of silences, words per minute and word f
     * ```'output/{}_output.txt'.format(self.audio_file.replace('.', '_')```
     * example : harvard.wav will be saved as harvard_wav_output.txt in output directory
   # Sample:
-      ```python test.py 'harvard.wav' --sd 100
-      ```
+      ```python test.py 'harvard.wav' --sd 100```
 ## Code explaination:
   - The Speech class uses pydub library to detect the number of silences, the silences are categorised with a minimum duration in ms and a maximum threshold in db.
   - It uses SpeechRecognition library to use google translate for recognising speech, this requires an active internet connection.
