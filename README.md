@@ -14,9 +14,9 @@ Takes .wav files and outputs the number of silences, words per minute and word f
   - run test.py
   - The following args need to be passed to test.py:
     * :param filename: (String) location of the audio file
-    * :param noise(default = False): (Bool) if the file contains noises apart from speech
-    * :param sd(default = 100): (int) minimum silence duration in ms
-    * :param st(default = -16): (int) maximum silence threshold in db
+    * :param --noise(default = False): (Bool) if the file contains noises apart from speech
+    * :param --sd(default = 100): (int) minimum silence duration in ms
+    * :param --st(default = -16): (int) maximum silence threshold in db
   - The output text file will be saved in the output directory in the following format:
     * ```'output/{}_output.txt'.format(self.audio_file.replace('.', '_')```
     * example : harvard.wav will be saved as harvard_wav_output.txt in output directory
