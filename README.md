@@ -11,21 +11,17 @@ Takes .wav files and outputs the number of silences, words per minute and word f
   - pydub
 
 ## Instructions:
-  - Import the speech_processing.py file
-  - The following args need to be passed to the Speech class:
-    * :param audio_file_name: (String) location of the audio file
+  - run test.py
+  - The following args need to be passed to test.py:
+    * :param filename: (String) location of the audio file
     * :param noise(default = False): (Bool) if the file contains noises apart from speech
-    * :param silence_duration(default = 100): (int) minimum silence duration in ms
-    * :param silence_threshold(default = -16): (int) maximum silence threshold in db
+    * :param sd(default = 100): (int) minimum silence duration in ms
+    * :param st(default = -16): (int) maximum silence threshold in db
   - The output text file will be saved in the output directory in the following format:
     * ```'output/{}_output.txt'.format(self.audio_file.replace('.', '_')```
     * example : harvard.wav will be saved as harvard_wav_output.txt in output directory
-  # Sample Code:
-      ```from speech_processing.py import Speech
-         speech = Speech("Output 1-3.wav",noise=True,silence_duration=100,silence_threshold=-16)
-         speech.silenceDetection()
-         speech.wordsPerMinute()
-         speech.wordFrequency()
+  # Sample:
+      ```python test.py 'harvard.wav' --sd 100
       ```
 ## Code explaination:
   - The Speech class uses pydub library to detect the number of silences, the silences are categorised with a minimum duration in ms and a maximum threshold in db.
